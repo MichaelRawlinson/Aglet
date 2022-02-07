@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="slider.js"></script>
+    <title>Document</title>
+
+    <!-- Hover play stop JS Start -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="jquery.hoverplay.js"></script>
+    <!-- Hover/play stop JS End -->
+
+    <!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
+
+    <!-- Scrolljacking Start -->
+    <script>
+      $(function () {
+        function showSlide(n) {
+          $("body").unbind("mousewheel");
+          currSlide += n;
+          currSlide =
+            currSlide <= 0
+              ? 0
+              : currSlide >= $slide.length - 1
+              ? $slide.length - 1
+              : currSlide;
+          var displacment = window.innerWidth * currSlide;
+          $(".slides").css("transform", "translateX(-" + displacment + "px)");
+          setTimeout(function () {
+            $("body").bind("mousewheel", mouseEvent);
+          }, 80);
+          $("nav a.active").removeClass("active");
+          $($("a")[currSlide]).addClass("active");
+        }
+        function mouseEvent(e, delta) {
+          showSlide(delta >= 0 ? 1 : -1);
+          e.preventDefault();
+        }
+        $("nav a").click(function (e) {
+          var newslide = parseInt($(this).attr("href")[1]);
+          var diff = newslide - currSlide - 1;
+          showSlide(diff);
+          e.preventDefault();
+        });
+        $(window).resize(function () {
+          var displacment = window.innerWidth * currSlide;
+          $(".slides").css("transform", "translateX(-" + displacment + "px)");
+        });
+        var currSlide = 0;
+        var $slide = $(".slide");
+        $($("nav a")[0]).addClass("active");
+        $("body").bind("mousewheel", mouseEvent);
+      });
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-36251023-1"]);
+      _gaq.push(["_setDomainName", "jqueryscript.net"]);
+      _gaq.push(["_trackPageview"]);
+
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src =
+          ("https:" == document.location.protocol
+            ? "https://ssl"
+            : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Scrolljacking end -->
+  </head>
+
+  <body>
+    <div class="slides">
+      <ul>
+        <li class="slide">
+          <video style="width: 100%">
+            <source src="/resources/videos/1.mp4" type="video/webm" />
+          </video>
+          <div class="contents">
+            <h2>Vodafone inkl. Netflix</h2>
+            <p>GigaTV</p>
+          </div>
+        </li>
+        <li class="slide">
+          <video style="width: 100%">
+            <source src="/resources/videos/2.mp4" type="video/webm" />
+          </video>
+          <div class="contents">
+            <h2>Vodafone inkl. Netflix</h2>
+            <p>GigaTV</p>
+          </div>
+        </li>
+        <li class="slide">
+          <video style="width: 100%">
+            <source src="/resources/videos/3.mp4" type="video/webm" />
+          </video>
+          <div class="contents">
+            <h2>Vodafone inkl. Netflix</h2>
+            <p>GigaTV</p>
+          </div>
+        </li>
+        <li class="slide">
+          <video style="width: 100%">
+            <source src="/resources/videos/5.mp4" type="video/webm" />
+          </video>
+          <div class="contents">
+            <h2>Vodafone inkl. Netflix</h2>
+            <p>GigaTV</p>
+          </div>
+        </li>
+      </ul>
+      <nav><i class="cases_nav_thumb"></i></nav>
+    </div>
+
+    <!-- Important Script, must go after all videos. Allows autoplay on hover & restart on leave -->
+    <script>
+      // Getting video element using jQuery
+      var video = $("video");
+
+      // Check if video is ready to play
+      $(video).on("canplay", function () {
+        $(video)
+          .mouseenter(function () {
+            $(this).get(0).play();
+          })
+          .mouseleave(function () {
+            $(this).get(0).load();
+          });
+      });
+    </script>
+    <!-- End of hover script -->
+  </body>
+</html>

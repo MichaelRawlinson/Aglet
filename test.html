@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <script src="jquery.hoverplay.js"></script>
+  </head>
+  <div>
+    <div>
+      <div id="video-wrapper"></div>
+      <video width="320" height="240" autoplay loop id="profolio-vid">
+        <source
+          src="http://localhost/Aglet V3/resources/Vodafone_Netflix_Stage_1280x720.webm"
+          type="video/webm"
+        />
+      </video>
+      </div>
+      <script>
+        // Getting video element using jQuery
+        var video = $("#video");
+  
+        // Check if video is ready to play
+        $(video).on("canplay", function () {
+          $(video)
+            .mouseenter(function () {
+              $(this).get(0).play();
+            })
+            .mouseleave(function () {
+              $(this).get(0).load();
+            });
+        });
+      </script>
+    </div>
+
+
+      <div id="video-wrapper">
+        <video
+          id="video"
+          width="320"
+          height="240"
+          controls
+          data-play="hover"
+          muted="muted"
+          autoplay
+          playsinline
+          style="pointer-events: none"
+        >
+          <source
+            src="http://localhost/Aglet V3/resources/Vodafone_Netflix_Stage_1280x720.webm"
+            type="video/webm"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- <script>
+        // Getting video element using jQuery
+        var video = $("#video");
+
+        // Check if video is ready to play
+        $(video).on("canplay", function () {
+          $(video)
+            .mouseenter(function () {
+              $(this).get(0).play();
+            })
+            .mouseleave(function () {
+              $(this).get(0).pause();
+            });
+        });
+      </script> -->
+
+      <!-- Mondays attempt -->
+      
+    </div>
+  </body>
+</html>
