@@ -140,7 +140,6 @@ nav a:hover::before {
   height: 100vh;
   -webkit-transition: -webkit-transform 0.8s ease;
   transition: transform 0.8s ease;
-  overflow-x: scroll;
 }
 
 .slides .slide {
@@ -178,7 +177,7 @@ nav a:hover::before {
   background-image: ;
 }
 
-.slides .slide:nth-child(2) {
+/* .slides .slide:nth-child(2) {
   background-image: url(https://unsplash.it/1800/1200?image=912);
 }
 
@@ -192,7 +191,7 @@ nav a:hover::before {
 
 .slides .slide:nth-child(5) {
   background-image: url(https://unsplash.it/1800/1200?image=412);
-}
+} */
 
 .slides .slide img {
   width: 100%;
@@ -203,9 +202,9 @@ nav a:hover::before {
 /* Temp bottom broken scrollbar
  */
 
-.main {
+/* .main {
   width: auto; height: 250px; border: 1px solid black; overflow-x: scroll;  font-size: 14px"
-}
+} */
 
 ::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -269,7 +268,6 @@ h4 {
   margin: 1px 1px 1px 1px;
 } */
 
-
 /* TEST SIDESCROLLIGN DIV */
 /* .main {
   width: 1000px;
@@ -292,3 +290,100 @@ h4 {
   transform: rotate(90deg);
   transform-origin: right top;
 } */
+
+/* Sidescroller */
+.scroll-jack {
+  position: relative;
+  height: 300px;
+  width: 100vw;
+  cursor: ns-resize;
+}
+.scroll-jack > * {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 120px;
+  padding-top: 100%;
+  transform: rotate(-90deg) scalex(-1) translatex(-100%);
+  transform-origin: top left;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.scroll-jack > * > * {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100vw;
+  height: 500px;
+  transform: rotate(90deg) scaley(-1) translatey(-100%);
+  transform-origin: top left;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+ul > li {
+  display: inline-flex !important;
+  /* justify-content: center;
+  align-items: center;
+  /* width: 50%; */
+  /* height: 200px; */
+  /* background: rgba(0, 119, 255, 0.6); */
+  /* padding: 10px; */
+  /* margin: 10px; */
+  /* border-radius: 10px; */
+  width: 500vw;
+  height: 100vh;
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: transform 0.8s ease;
+
+  height: 30vh;
+  width: 30vw;
+  background: pink;
+
+  text-align: center;
+  background-size: cover;
+}
+
+video {
+  height: auto;
+}
+
+.inner {
+  height: 200px;
+  padding: 0%;
+}
+/*.slides {
+  width: 500vw;
+  height: 100vh;
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: transform 0.8s ease;
+  overflow-x: scroll;
+}
+
+.slides .slide {
+  height: 30vh;
+  width: 30vw;
+  background: pink;
+  float: left;
+  text-align: center;
+  background-size: cover;
+  display: inline-flex; !important;
+}
+
+*/
+
+.scroll-horizonal {
+  overflow-x: auto;
+  cursor: ew-resize;
+}
+h1 {
+  margin: 10px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}

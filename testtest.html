@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stle5.css" />
+
+    <title>Document</title>
+
+    <!-- TEST moving scrollbar -->
+
+    <!-- Hover play stop JS Start -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="jquery.hoverplay.js"></script>
+    <!-- Hover/play stop JS End -->
+
+    <!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
+
+    <!-- Scrolljacking Start -->
+    <script>
+      $(function () {
+        function showSlide(n) {
+          $("body").unbind("mousewheel");
+          currSlide += n;
+          currSlide =
+            currSlide <= 0
+              ? 0
+              : currSlide >= $slide.length - 1
+              ? $slide.length - 1
+              : currSlide;
+          var displacment = window.innerWidth * currSlide;
+          $(".slides").css("transform", "translateX(-" + displacment + "px)");
+          setTimeout(function () {
+            $("body").bind("mousewheel", mouseEvent);
+          }, 80);
+          $("nav a.active").removeClass("active");
+          $($("a")[currSlide]).addClass("active");
+        }
+        function mouseEvent(e, delta) {
+          showSlide(delta >= 0 ? 1 : -1);
+          e.preventDefault();
+        }
+        $("nav a").click(function (e) {
+          var newslide = parseInt($(this).attr("href")[1]);
+          var diff = newslide - currSlide - 1;
+          showSlide(diff);
+          e.preventDefault();
+        });
+        $(window).resize(function () {
+          var displacment = window.innerWidth * currSlide;
+          $(".slides").css("transform", "translateX(-" + displacment + "px)");
+        });
+        var currSlide = 0;
+        var $slide = $(".slide");
+        $($("nav a")[0]).addClass("active");
+        $("body").bind("mousewheel", mouseEvent);
+      });
+    </script>
+
+    <!-- Scrolljacking end -->
+
+    <!-- test 4 script -->
+    <script>
+      var b = null;
+      $(".carousel-frame ul")
+        .on("mousemove", function (e) {
+          var container = $(this).parent();
+          if (e.pageX - container.offset().left < container.width() / 2) {
+            var direction = function () {
+              container.animate(
+                { scrollLeft: "-=600" },
+                1000,
+                "linear",
+                direction
+              );
+            };
+            if (b == false || b == null) {
+              b = true;
+              container
+                .stop(true)
+                .animate({ scrollLeft: "-=600" }, 1000, "linear", direction);
+            }
+          } else {
+            var direction = function () {
+              container.animate(
+                { scrollLeft: "+=600" },
+                1000,
+                "linear",
+                direction
+              );
+            };
+            if (b == true || b == null) {
+              b = false;
+              container
+                .stop(true)
+                .animate({ scrollLeft: "+=600" }, 1000, "linear", direction);
+            }
+          }
+        })
+        .on("mouseleave", function () {
+          var container = $(this).parent();
+          container.stop(true);
+          b = null;
+        });
+    </script>
+  </head>
+
+  <body>
+    <h1>Normal <small>(scroll left & right)</small></h1>
+    <ul class="list scroll-horizonal">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+      <li>item 6</li>
+      <li>item 7</li>
+      <li>item 8</li>
+    </ul>
+
+    <h1>Jacked <small>(scroll up & down)</small></h1>
+    <div class="scroll-jack">
+      <div class="inner">
+        <ul class="inner">
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+          <li>item 4</li>
+          <li>item 5</li>
+          <li>item 6</li>
+          <li>item 7</li>
+          <li>item 8</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

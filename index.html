@@ -30,7 +30,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
 
     <!-- Scrolljacking Start -->
-    <script>
+    <!-- <script>
       $(function () {
         function showSlide(n) {
           $("body").unbind("mousewheel");
@@ -68,12 +68,12 @@
         $($("nav a")[0]).addClass("active");
         $("body").bind("mousewheel", mouseEvent);
       });
-    </script>
+    </script> -->
 
     <!-- Scrolljacking end -->
 
     <!-- test 4 script -->
-    <script>
+    <!-- <script>
       var b = null;
       $(".carousel-frame ul")
         .on("mousemove", function (e) {
@@ -115,121 +115,155 @@
           container.stop(true);
           b = null;
         });
-    </script>
+    </script> -->
   </head>
 
   <body>
-    <div class="slides">
-      <ul>
-        <li class="slide">
-          <video style="width: 100%" poster="resources/images/1.jpg">
-            <source src="/resources/videos/1.mp4" type="video/webm" />
-          </video>
-          <div class="contents">
-            <h2>Vodafone inkl. Netflix</h2>
-            <p>GigaTV</p>
-          </div>
-        </li>
-        <li class="slide">
-          <video style="width: 100%" poster="resources/images/2.jpg">
-            <source src="/resources/videos/2.mp4" type="video/webm" />
-          </video>
-          <div class="contents">
-            <h2>Vodafone inkl. Netflix</h2>
-            <p>GigaTV</p>
-          </div>
-        </li>
-        <li class="slide">
-          <video style="width: 100%" poster="resources/images/3.jpg">
-            <source src="/resources/videos/3.mp4" type="video/webm" />
-          </video>
-          <div class="contents">
-            <h2>Vodafone inkl. Netflix</h2>
-            <p>GigaTV</p>
-          </div>
-        </li>
-        <li class="slide">
-          <video style="width: 100%" poster="resources/images/4.jpg">
-            <source src="/resources/videos/4.mp4" type="video/webm" />
-          </video>
-          <div class="contents">
-            <h2>Vodafone inkl. Netflix</h2>
-            <p>GigaTV</p>
-          </div>
-        </li>
-        <li class="slide">
-          <video style="width: 100%" poster="resources/images/5.jpg">
-            <source src="/resources/videos/5.mp4" type="video/webm" />
-          </video>
-          <div class="contents">
-            <h2>Vodafone inkl. Netflix</h2>
-            <p>GigaTV</p>
-          </div>
-        </li>
-        <li class="slide">
-          <video style="width: 100%" poster="resources/images/6.jpg">
-            <source src="/resources/videos/6.mp4" type="video/webm" />
-          </video>
-          <div class="contents">
-            <h2>Vodafone inkl. Netflix</h2>
-            <p>GigaTV</p>
-          </div>
-        </li>
-        <li class="slide">
-          <video style="width: 100%" poster="resources/images/7.jpg">
-            <source src="/resources/videos/7.mp4" type="video/webm" />
-          </video>
-          <div class="contents">
-            <h2>Vodafone inkl. Netflix</h2>
-            <p>GigaTV</p>
-          </div>
-        </li>
-        <li class="slide">
-          <video style="width: 100%" poster="resources/images/8.jpg">
-            <source src="/resources/videos/8.mp4" type="video/webm" />
-          </video>
-          <div class="contents">
-            <h2>Vodafone inkl. Netflix</h2>
-            <p>GigaTV</p>
-          </div>
-        </li>
-        <li class="slide">
-          <video style="width: 100%" poster="resources/images/9.jpg">
-            <source src="/resources/videos/9.mp4" type="video/webm" />
-          </video>
-          <div class="contents">
-            <h2>Vodafone inkl. Netflix</h2>
-            <p>GigaTV</p>
-          </div>
-        </li>
-        <li class="slide">
-          <video style="width: 100%" poster="resources/images/10.jpg">
-            <source src="/resources/videos/10.mp4" type="video/webm" />
-          </video>
-          <div class="contents">
-            <h2>Vodafone inkl. Netflix</h2>
-            <p>GigaTV</p>
-          </div>
-        </li>
-        <li class="slide">
-          <video style="width: 100%" poster="resources/images/11.jpg">
-            <source src="/resources/videos/11.mp4" type="video/webm" />
-          </video>
-          <div class="contents">
-            <h2>Vodafone inkl. Netflix</h2>
-            <p>GigaTV</p>
-          </div>
-        </li>
-        <li class="slide">
-          <video style="width: 100%" poster="resources/images/12.jpg">
-            <source src="/resources/videos/12.mp4" type="video/webm" />
-          </video>
-          <div class="contents">
-            <h2>Vodafone inkl. Netflix</h2>
-            <p>GigaTV</p>
-          </div>
-        </li>
-      </ul>
+    <div class="scroll-jack">
+      <div class="inner" style="height: 250px">
+        <ul class="inner" style="height: auto">
+          <li class="slide">
+            item 1
+
+            <video
+              style="width: 100%; height: auto"
+              poster="resources/images/1.jpg"
+            >
+              <source src="/resources/videos/1.mp4" type="video/webm" />
+            </video>
+            <div class="contents">
+              <h2>Vodafone inkl. Netflix</h2>
+              <p>GigaTV</p>
+            </div>
+          </li>
+          <li>item 2</li>
+          <li>item 3</li>
+          <li>item 4</li>
+          <li>item 5</li>
+          <li>item 6</li>
+          <li>item 7</li>
+          <li>item 8</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scroll-jack">
+      <div class="inner">
+        <div class="slides">
+          <ul>
+            <li class="slide">
+              <video
+                style="width: 100%; height: auto"
+                poster="resources/images/1.jpg"
+              >
+                <source src="/resources/videos/1.mp4" type="video/webm" />
+              </video>
+              <div class="contents">
+                <h2>Vodafone inkl. Netflix</h2>
+                <p>GigaTV</p>
+              </div>
+            </li>
+            <li class="slide">
+              <video style="width: 100%" poster="resources/images/2.jpg">
+                <source src="/resources/videos/2.mp4" type="video/webm" />
+              </video>
+              <div class="contents">
+                <h2>Vodafone inkl. Netflix</h2>
+                <p>GigaTV</p>
+              </div>
+            </li>
+            <li class="slide">
+              <video style="width: 100%" poster="resources/images/3.jpg">
+                <source src="/resources/videos/3.mp4" type="video/webm" />
+              </video>
+              <div class="contents">
+                <h2>Vodafone inkl. Netflix</h2>
+                <p>GigaTV</p>
+              </div>
+            </li>
+            <li class="slide">
+              <video style="width: 100%" poster="resources/images/4.jpg">
+                <source src="/resources/videos/4.mp4" type="video/webm" />
+              </video>
+              <div class="contents">
+                <h2>Vodafone inkl. Netflix</h2>
+                <p>GigaTV</p>
+              </div>
+            </li>
+            <li class="slide">
+              <video style="width: 100%" poster="resources/images/5.jpg">
+                <source src="/resources/videos/5.mp4" type="video/webm" />
+              </video>
+              <div class="contents">
+                <h2>Vodafone inkl. Netflix</h2>
+                <p>GigaTV</p>
+              </div>
+            </li>
+            <li class="slide">
+              <video style="width: 100%" poster="resources/images/6.jpg">
+                <source src="/resources/videos/6.mp4" type="video/webm" />
+              </video>
+              <div class="contents">
+                <h2>Vodafone inkl. Netflix</h2>
+                <p>GigaTV</p>
+              </div>
+            </li>
+            <li class="slide">
+              <video style="width: 100%" poster="resources/images/7.jpg">
+                <source src="/resources/videos/7.mp4" type="video/webm" />
+              </video>
+              <div class="contents">
+                <h2>Vodafone inkl. Netflix</h2>
+                <p>GigaTV</p>
+              </div>
+            </li>
+            <li class="slide">
+              <video style="width: 100%" poster="resources/images/8.jpg">
+                <source src="/resources/videos/8.mp4" type="video/webm" />
+              </video>
+              <div class="contents">
+                <h2>Vodafone inkl. Netflix</h2>
+                <p>GigaTV</p>
+              </div>
+            </li>
+            <li class="slide">
+              <video style="width: 100%" poster="resources/images/9.jpg">
+                <source src="/resources/videos/9.mp4" type="video/webm" />
+              </video>
+              <div class="contents">
+                <h2>Vodafone inkl. Netflix</h2>
+                <p>GigaTV</p>
+              </div>
+            </li>
+            <li class="slide">
+              <video style="width: 100%" poster="resources/images/10.jpg">
+                <source src="/resources/videos/10.mp4" type="video/webm" />
+              </video>
+              <div class="contents">
+                <h2>Vodafone inkl. Netflix</h2>
+                <p>GigaTV</p>
+              </div>
+            </li>
+            <li class="slide">
+              <video style="width: 100%" poster="resources/images/11.jpg">
+                <source src="/resources/videos/11.mp4" type="video/webm" />
+              </video>
+              <div class="contents">
+                <h2>Vodafone inkl. Netflix</h2>
+                <p>GigaTV</p>
+              </div>
+            </li>
+            <li class="slide">
+              <video style="width: 100%" poster="resources/images/12.jpg">
+                <source src="/resources/videos/12.mp4" type="video/webm" />
+              </video>
+              <div class="contents">
+                <h2>Vodafone inkl. Netflix</h2>
+                <p>GigaTV</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Important Script, must go after all videos. Allows autoplay on hover & restart on leave -->
