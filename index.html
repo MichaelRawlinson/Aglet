@@ -11,8 +11,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="slider.js"></script>
+
     <title>Document</title>
+
+    <!-- TEST moving scrollbar -->
 
     <!-- Hover play stop JS Start -->
     <script
@@ -67,33 +69,60 @@
         $("body").bind("mousewheel", mouseEvent);
       });
     </script>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(["_setAccount", "UA-36251023-1"]);
-      _gaq.push(["_setDomainName", "jqueryscript.net"]);
-      _gaq.push(["_trackPageview"]);
-
-      (function () {
-        var ga = document.createElement("script");
-        ga.type = "text/javascript";
-        ga.async = true;
-        ga.src =
-          ("https:" == document.location.protocol
-            ? "https://ssl"
-            : "http://www") + ".google-analytics.com/ga.js";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
 
     <!-- Scrolljacking end -->
+
+    <!-- test 4 script -->
+    <script>
+      var b = null;
+      $(".carousel-frame ul")
+        .on("mousemove", function (e) {
+          var container = $(this).parent();
+          if (e.pageX - container.offset().left < container.width() / 2) {
+            var direction = function () {
+              container.animate(
+                { scrollLeft: "-=600" },
+                1000,
+                "linear",
+                direction
+              );
+            };
+            if (b == false || b == null) {
+              b = true;
+              container
+                .stop(true)
+                .animate({ scrollLeft: "-=600" }, 1000, "linear", direction);
+            }
+          } else {
+            var direction = function () {
+              container.animate(
+                { scrollLeft: "+=600" },
+                1000,
+                "linear",
+                direction
+              );
+            };
+            if (b == true || b == null) {
+              b = false;
+              container
+                .stop(true)
+                .animate({ scrollLeft: "+=600" }, 1000, "linear", direction);
+            }
+          }
+        })
+        .on("mouseleave", function () {
+          var container = $(this).parent();
+          container.stop(true);
+          b = null;
+        });
+    </script>
   </head>
 
   <body>
     <div class="slides">
       <ul>
         <li class="slide">
-          <video style="width: 100%">
+          <video style="width: 100%" poster="resources/images/1.jpg">
             <source src="/resources/videos/1.mp4" type="video/webm" />
           </video>
           <div class="contents">
@@ -102,7 +131,7 @@
           </div>
         </li>
         <li class="slide">
-          <video style="width: 100%">
+          <video style="width: 100%" poster="resources/images/2.jpg">
             <source src="/resources/videos/2.mp4" type="video/webm" />
           </video>
           <div class="contents">
@@ -111,7 +140,7 @@
           </div>
         </li>
         <li class="slide">
-          <video style="width: 100%">
+          <video style="width: 100%" poster="resources/images/3.jpg">
             <source src="/resources/videos/3.mp4" type="video/webm" />
           </video>
           <div class="contents">
@@ -120,7 +149,16 @@
           </div>
         </li>
         <li class="slide">
-          <video style="width: 100%">
+          <video style="width: 100%" poster="resources/images/4.jpg">
+            <source src="/resources/videos/4.mp4" type="video/webm" />
+          </video>
+          <div class="contents">
+            <h2>Vodafone inkl. Netflix</h2>
+            <p>GigaTV</p>
+          </div>
+        </li>
+        <li class="slide">
+          <video style="width: 100%" poster="resources/images/5.jpg">
             <source src="/resources/videos/5.mp4" type="video/webm" />
           </video>
           <div class="contents">
@@ -128,8 +166,70 @@
             <p>GigaTV</p>
           </div>
         </li>
+        <li class="slide">
+          <video style="width: 100%" poster="resources/images/6.jpg">
+            <source src="/resources/videos/6.mp4" type="video/webm" />
+          </video>
+          <div class="contents">
+            <h2>Vodafone inkl. Netflix</h2>
+            <p>GigaTV</p>
+          </div>
+        </li>
+        <li class="slide">
+          <video style="width: 100%" poster="resources/images/7.jpg">
+            <source src="/resources/videos/7.mp4" type="video/webm" />
+          </video>
+          <div class="contents">
+            <h2>Vodafone inkl. Netflix</h2>
+            <p>GigaTV</p>
+          </div>
+        </li>
+        <li class="slide">
+          <video style="width: 100%" poster="resources/images/8.jpg">
+            <source src="/resources/videos/8.mp4" type="video/webm" />
+          </video>
+          <div class="contents">
+            <h2>Vodafone inkl. Netflix</h2>
+            <p>GigaTV</p>
+          </div>
+        </li>
+        <li class="slide">
+          <video style="width: 100%" poster="resources/images/9.jpg">
+            <source src="/resources/videos/9.mp4" type="video/webm" />
+          </video>
+          <div class="contents">
+            <h2>Vodafone inkl. Netflix</h2>
+            <p>GigaTV</p>
+          </div>
+        </li>
+        <li class="slide">
+          <video style="width: 100%" poster="resources/images/10.jpg">
+            <source src="/resources/videos/10.mp4" type="video/webm" />
+          </video>
+          <div class="contents">
+            <h2>Vodafone inkl. Netflix</h2>
+            <p>GigaTV</p>
+          </div>
+        </li>
+        <li class="slide">
+          <video style="width: 100%" poster="resources/images/11.jpg">
+            <source src="/resources/videos/11.mp4" type="video/webm" />
+          </video>
+          <div class="contents">
+            <h2>Vodafone inkl. Netflix</h2>
+            <p>GigaTV</p>
+          </div>
+        </li>
+        <li class="slide">
+          <video style="width: 100%" poster="resources/images/12.jpg">
+            <source src="/resources/videos/12.mp4" type="video/webm" />
+          </video>
+          <div class="contents">
+            <h2>Vodafone inkl. Netflix</h2>
+            <p>GigaTV</p>
+          </div>
+        </li>
       </ul>
-      <nav><i class="cases_nav_thumb"></i></nav>
     </div>
 
     <!-- Important Script, must go after all videos. Allows autoplay on hover & restart on leave -->

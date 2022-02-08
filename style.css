@@ -198,8 +198,13 @@ nav a:hover::before {
   width: 100%;
 }
 
-body {
-  overflow-x: scroll; /* Show scrollbars */
+/* end of index css */
+
+/* Temp bottom broken scrollbar
+ */
+
+.main {
+  width: auto; height: 250px; border: 1px solid black; overflow-x: scroll;  font-size: 14px"
 }
 
 ::-webkit-scrollbar {
@@ -211,4 +216,79 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
   width: 100px;
+  position: absolute;
 }
+
+/* TEST 3 */
+
+/* .carousel-frame {
+  width: 100%;
+  margin-bottom: 0.5em;
+  padding-bottom: 1em;
+  position: relative;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.carousel-frame ul {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+}
+.carousel-frame li.carousel-item {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px 0 0;
+  padding: 0;
+} */
+
+/* TEST 4 */
+/* body {
+  background: #419be0;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  color: #333;
+}
+
+.slick-slide {
+  text-align: center;
+  color: #419be0;
+  background: white;
+  margin: 10px;
+}
+
+h4 {
+  text-align: center;
+}
+
+.slider-item {
+  width: 10000px;
+  margin: 1px 1px 1px 1px;
+} */
+
+
+/* TEST SIDESCROLLIGN DIV */
+/* .main {
+  width: 1000px;
+  height: 3000px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.main > div {
+  width: 100px;
+  height: 100px;
+}
+
+.main {
+ 
+  transform: rotate(-90deg);
+  transform-origin: right top;
+}
+.main > div {
+
+  transform: rotate(90deg);
+  transform-origin: right top;
+} */
