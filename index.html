@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,261 +16,158 @@
     />
     <link rel="stylesheet" href="style.css" />
 
-    <title>Document</title>
+    <!-- Boostrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
-    <!-- TEST moving scrollbar -->
+    <!-- JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
 
-    <!-- Hover play stop JS Start -->
+    <!-- Hover Autoplay JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
 
-    <script src="jquery.hoverplay.js"></script>
-    <!-- Hover/play stop JS End -->
+    <!-- Cookies-->
+    <!-- Bootstrap 4.1.1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
+    />
 
+    <!-- cookiealert styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css"
+    />
+
+    <title>Document</title>
+
+    <!-- nonessesntial -->
+    <!-- <script src="jquery.hoverplay.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script> -->
     <!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
-
-    <!-- Scrolljacking Start -->
-    <!-- <script>
-      $(function () {
-        function showSlide(n) {
-          $("body").unbind("mousewheel");
-          currSlide += n;
-          currSlide =
-            currSlide <= 0
-              ? 0
-              : currSlide >= $slide.length - 1
-              ? $slide.length - 1
-              : currSlide;
-          var displacment = window.innerWidth * currSlide;
-          $(".slides").css("transform", "translateX(-" + displacment + "px)");
-          setTimeout(function () {
-            $("body").bind("mousewheel", mouseEvent);
-          }, 80);
-          $("nav a.active").removeClass("active");
-          $($("a")[currSlide]).addClass("active");
-        }
-        function mouseEvent(e, delta) {
-          showSlide(delta >= 0 ? 1 : -1);
-          e.preventDefault();
-        }
-        $("nav a").click(function (e) {
-          var newslide = parseInt($(this).attr("href")[1]);
-          var diff = newslide - currSlide - 1;
-          showSlide(diff);
-          e.preventDefault();
-        });
-        $(window).resize(function () {
-          var displacment = window.innerWidth * currSlide;
-          $(".slides").css("transform", "translateX(-" + displacment + "px)");
-        });
-        var currSlide = 0;
-        var $slide = $(".slide");
-        $($("nav a")[0]).addClass("active");
-        $("body").bind("mousewheel", mouseEvent);
-      });
-    </script> -->
-
-    <!-- Scrolljacking end -->
-
-    <!-- test 4 script -->
-    <!-- <script>
-      var b = null;
-      $(".carousel-frame ul")
-        .on("mousemove", function (e) {
-          var container = $(this).parent();
-          if (e.pageX - container.offset().left < container.width() / 2) {
-            var direction = function () {
-              container.animate(
-                { scrollLeft: "-=600" },
-                1000,
-                "linear",
-                direction
-              );
-            };
-            if (b == false || b == null) {
-              b = true;
-              container
-                .stop(true)
-                .animate({ scrollLeft: "-=600" }, 1000, "linear", direction);
-            }
-          } else {
-            var direction = function () {
-              container.animate(
-                { scrollLeft: "+=600" },
-                1000,
-                "linear",
-                direction
-              );
-            };
-            if (b == true || b == null) {
-              b = false;
-              container
-                .stop(true)
-                .animate({ scrollLeft: "+=600" }, 1000, "linear", direction);
-            }
-          }
-        })
-        .on("mouseleave", function () {
-          var container = $(this).parent();
-          container.stop(true);
-          b = null;
-        });
-    </script> -->
   </head>
-
   <body>
-    <div class="scroll-jack">
-      <div class="inner" style="height: 250px">
-        <ul class="inner" style="height: auto">
-          <li class="slide">
-            item 1
-
-            <video
-              style="width: 100%; height: auto"
-              poster="resources/images/1.jpg"
-            >
-              <source src="/resources/videos/1.mp4" type="video/webm" />
-            </video>
-            <div class="contents">
-              <h2>Vodafone inkl. Netflix</h2>
-              <p>GigaTV</p>
-            </div>
-          </li>
-          <li>item 2</li>
-          <li>item 3</li>
-          <li>item 4</li>
-          <li>item 5</li>
-          <li>item 6</li>
-          <li>item 7</li>
-          <li>item 8</li>
-        </ul>
+    <div class="header row">
+      <div class="col-2">
+        <img src="resources/aglet_logo.svg" alt="logo" class="logo" />
       </div>
-    </div>
-    <div class="scroll-jack">
-      <div class="inner">
-        <div class="slides">
-          <ul>
-            <li class="slide">
-              <video
-                style="width: 100%; height: auto"
-                poster="resources/images/1.jpg"
-              >
-                <source src="/resources/videos/1.mp4" type="video/webm" />
-              </video>
-              <div class="contents">
-                <h2>Vodafone inkl. Netflix</h2>
-                <p>GigaTV</p>
-              </div>
-            </li>
-            <li class="slide">
-              <video style="width: 100%" poster="resources/images/2.jpg">
-                <source src="/resources/videos/2.mp4" type="video/webm" />
-              </video>
-              <div class="contents">
-                <h2>Vodafone inkl. Netflix</h2>
-                <p>GigaTV</p>
-              </div>
-            </li>
-            <li class="slide">
-              <video style="width: 100%" poster="resources/images/3.jpg">
-                <source src="/resources/videos/3.mp4" type="video/webm" />
-              </video>
-              <div class="contents">
-                <h2>Vodafone inkl. Netflix</h2>
-                <p>GigaTV</p>
-              </div>
-            </li>
-            <li class="slide">
-              <video style="width: 100%" poster="resources/images/4.jpg">
-                <source src="/resources/videos/4.mp4" type="video/webm" />
-              </video>
-              <div class="contents">
-                <h2>Vodafone inkl. Netflix</h2>
-                <p>GigaTV</p>
-              </div>
-            </li>
-            <li class="slide">
-              <video style="width: 100%" poster="resources/images/5.jpg">
-                <source src="/resources/videos/5.mp4" type="video/webm" />
-              </video>
-              <div class="contents">
-                <h2>Vodafone inkl. Netflix</h2>
-                <p>GigaTV</p>
-              </div>
-            </li>
-            <li class="slide">
-              <video style="width: 100%" poster="resources/images/6.jpg">
-                <source src="/resources/videos/6.mp4" type="video/webm" />
-              </video>
-              <div class="contents">
-                <h2>Vodafone inkl. Netflix</h2>
-                <p>GigaTV</p>
-              </div>
-            </li>
-            <li class="slide">
-              <video style="width: 100%" poster="resources/images/7.jpg">
-                <source src="/resources/videos/7.mp4" type="video/webm" />
-              </video>
-              <div class="contents">
-                <h2>Vodafone inkl. Netflix</h2>
-                <p>GigaTV</p>
-              </div>
-            </li>
-            <li class="slide">
-              <video style="width: 100%" poster="resources/images/8.jpg">
-                <source src="/resources/videos/8.mp4" type="video/webm" />
-              </video>
-              <div class="contents">
-                <h2>Vodafone inkl. Netflix</h2>
-                <p>GigaTV</p>
-              </div>
-            </li>
-            <li class="slide">
-              <video style="width: 100%" poster="resources/images/9.jpg">
-                <source src="/resources/videos/9.mp4" type="video/webm" />
-              </video>
-              <div class="contents">
-                <h2>Vodafone inkl. Netflix</h2>
-                <p>GigaTV</p>
-              </div>
-            </li>
-            <li class="slide">
-              <video style="width: 100%" poster="resources/images/10.jpg">
-                <source src="/resources/videos/10.mp4" type="video/webm" />
-              </video>
-              <div class="contents">
-                <h2>Vodafone inkl. Netflix</h2>
-                <p>GigaTV</p>
-              </div>
-            </li>
-            <li class="slide">
-              <video style="width: 100%" poster="resources/images/11.jpg">
-                <source src="/resources/videos/11.mp4" type="video/webm" />
-              </video>
-              <div class="contents">
-                <h2>Vodafone inkl. Netflix</h2>
-                <p>GigaTV</p>
-              </div>
-            </li>
-            <li class="slide">
-              <video style="width: 100%" poster="resources/images/12.jpg">
-                <source src="/resources/videos/12.mp4" type="video/webm" />
-              </video>
-              <div class="contents">
-                <h2>Vodafone inkl. Netflix</h2>
-                <p>GigaTV</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <div class="col-8"></div>
+      <div class="col-2">
+        <nav>
+          <a href="index.html">home</a>
+          <a href="contact.html">contact</a>
+        </nav>
       </div>
     </div>
 
-    <!-- Important Script, must go after all videos. Allows autoplay on hover & restart on leave -->
+    <div id="container" class="">
+      <div class="slide">
+        <video poster="resources/images/1.jpg">
+          <source src="/resources/videos/1.mp4" type="video/webm" />
+        </video>
+        <h4>Vodafone inkl. Netflix</h4>
+        <h6>GigaTV</h6>
+      </div>
+      <div class="slide">
+        <video poster="resources/images/2.jpg">
+          <source src="/resources/videos/2.mp4" type="video/webm" />
+        </video>
+        <h4>Vodafone inkl. Netflix</h4>
+        <h6>GigaTV</h6>
+      </div>
+      <div class="slide">
+        <video poster="resources/images/3.jpg">
+          <source src="/resources/videos/3.mp4" type="video/webm" />
+        </video>
+        <h4>Vodafone inkl. Netflix</h4>
+        <h6>GigaTV</h6>
+      </div>
+      <div class="slide">
+        <video poster="resources/images/4.jpg">
+          <source src="/resources/videos/4.mp4" type="video/webm" />
+        </video>
+        <h4>Vodafone inkl. Netflix</h4>
+        <h6>GigaTV</h6>
+      </div>
+      <div class="slide">
+        <video poster="resources/images/5.jpg">
+          <source src="/resources/videos/5.mp4" type="video/webm" />
+        </video>
+        <h4>Vodafone inkl. Netflix</h4>
+        <h6>GigaTV</h6>
+      </div>
+      <div class="slide">
+        <video poster="resources/images/6.jpg">
+          <source src="/resources/videos/6.mp4" type="video/webm" />
+        </video>
+        <h4>Vodafone inkl. Netflix</h4>
+        <h6>GigaTV</h6>
+      </div>
+      <div class="slide">
+        <video poster="resources/images/7.jpg">
+          <source src="/resources/videos/7.mp4" type="video/webm" />
+        </video>
+        <h4>Vodafone inkl. Netflix</h4>
+        <h6>GigaTV</h6>
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup row ">
+      <div class="col-8 my-auto"
+      <p>
+        This website uses cookies for analysis purposes. By continuing to use
+        this website you are giving consent to cookies being used. For
+        information on cookies and how you can disable them visit our privacy
+        policy.
+      </p>
+      </div>
+      <div class="col-4 my-auto">
+      <button id="continue">Continue</button>
+    </div>
+    </div>
+    <!-- Cookie Popup -->
+    <script>
+      document
+        .querySelector("#continue")
+        .addEventListener("click", function () {
+          document.querySelector(".popup").style.display = "none";
+        });
+    </script>
+
+    <!-- JAVASCRIPT -->
+
+    <!-- Only for the demo -->
+    <!-- <script>
+      for (var i = 1; i <= 150; i++)
+        document.querySelector("#fillme").innerHTML +=
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ";
+    </script>
+
+   
+    Important Script, must go after all videos. Allows autoplay on hover & restart on leave -->
     <script>
       // Getting video element using jQuery
       var video = $("video");
@@ -283,5 +184,49 @@
       });
     </script>
     <!-- End of hover script -->
+
+    <!-- ScrollJack Script -->
+    <script>
+      const element = document.querySelector("#container");
+
+      element.addEventListener("wheel", (event) => {
+        event.preventDefault();
+
+        element.scrollBy({
+          left: event.deltaY < 0 ? -30 : 30,
+        });
+      });
+    </script>
+
+    <!-- Cookie JS -->
+
+    <!-- cookie warning toast -->
+
+    <!-- page content -->
+    <!-- <div class="container py-4">
+      <h1 class="font-weight-light">Page Content Here....</h1>
+      <p>
+        This is an example of using the Bootstrap 4 Toast component as a cookie
+        warning pop-up.
+      </p>
+      <button type="button" class="btn btn-outline-light mr-3" id="btnReset">
+        Reset Demo
+      </button>
+    </div>
+
+    <div class="ilcc-cookie-consent-notice js--ilcc-cookie-consent-notice">
+      <p>
+        <span
+          >This website uses cookies for analysis purposes. By continuing to use
+          this website you are giving consent to cookies being used. <br />For
+          information on cookies and how you can disable them visit our
+          <a href="/impressum/">privacy policy</a>.</span
+        ><button
+          class="ilcc-cookie-consent-close js--ilcc-cookie-consent-close close-cookie-block btn btn--rect btn--white"
+        >
+          Continue
+        </button>
+      </p>
+    </div> -->
   </body>
 </html>
