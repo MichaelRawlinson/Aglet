@@ -8,10 +8,19 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <!-- Tab Icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://aglet.co.za/wp-content/uploads/2015/09/Aglet_favicon.png"
+    />
+
+    <!-- CSS Links -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/pageload.css" />
     <link rel="stylesheet" href="css/scrollbar.css" />
     <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="css/navmenu.css" />
 
     <!-- Bootstrap -->
     <link
@@ -27,6 +36,7 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+
     <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/51951ccf62.js"
@@ -37,15 +47,39 @@
   </head>
   <body>
     <div class="header row">
-      <div class="col-2">
-        <img src="resources/aglet_logo.svg" alt="logo" class="logo" />
+      <div class="col">
+        <a href="index.html">
+          <img src="resources/aglet_logo.svg" alt="logo" class="logo" />
+        </a>
       </div>
-      <div class="col-8"></div>
-      <div class="col-2">
-        <nav>
+      <div class="col"></div>
+      <div class="col">
+        <nav style="float: right" class="navdesktop">
           <a href="index.html">home</a>
           <a href="contact.html">contact</a>
         </nav>
+        <div class="topnav active navmobile">
+          <a
+            href=".index"
+            class="active"
+            style="color: black; height: 50px"
+          ></a>
+          <div id="myLinks">
+            <a
+              href="index.html"
+              style="color: black; background-color: rgb(255, 255, 255)"
+              >Home</a
+            >
+            <a
+              href="index.html"
+              style="color: black; background-color: rgb(255, 255, 255)"
+              >Contact</a
+            >
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -54,6 +88,7 @@
         <video poster="resources/images/1.jpg">
           <source src="/resources/videos/1.mp4" type="video/webm" />
         </video>
+
         <h4>Vodafone inkl. Netflix</h4>
         <h6>GigaTV</h6>
       </div>
@@ -169,7 +204,7 @@
       });
     </script>
 
-    <!-- Video Autoplay -->
+    <!-- Video Hover Autoplay -->
     <script>
       var video = $("video");
 
@@ -190,12 +225,24 @@
       const element = document.querySelector("#container");
 
       element.addEventListener("wheel", (event) => {
-        event.preventDefault();
+        // event.preventDefault();
 
         element.scrollBy({
           left: event.deltaY < 0 ? -30 : 30,
         });
       });
+    </script>
+
+    <!-- Nav Menu -->
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
     </script>
   </body>
 </html>

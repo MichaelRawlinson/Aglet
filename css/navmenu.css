@@ -1,0 +1,88 @@
+/* No Hamburger :(*/
+
+nav {
+  padding-top: 40px;
+  letter-spacing: 0.025em;
+  margin-right: 15px;
+  font-weight: 600;
+}
+nav > a {
+  color: white;
+  font-size: 15px;
+  margin: 0px 8px 0px 8px;
+  text-transform: bold;
+}
+
+nav > a:hover {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid rgb(255, 255, 255) !important;
+  transition-duration: 0.2s;
+}
+
+a:active {
+  border-bottom: 2px solid rgb(255, 255, 255) !important;
+  background-image: none !important;
+  transition-duration: 0.2s;
+}
+
+@media only screen and (max-width: 960px) {
+  .navdesktop {
+    display: none;
+  }
+}
+
+/* Hamburger :)*/
+.navmobile {
+  display: none;
+  z-index: 1000;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  right: 2%;
+  top: 2%;
+  background-color: transparent;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: transparent;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: -40px;
+}
+
+.topnav > a {
+  width: 100px;
+}
+
+.topnav a:hover {
+  color: white;
+}
+
+#myLinks {
+  width: 50vw;
+  margin-right: 30px;
+}
+
+@media only screen and (max-width: 960px) {
+  .navmobile {
+    display: block;
+  }
+}
