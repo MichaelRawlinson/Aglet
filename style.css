@@ -1,0 +1,374 @@
+body {
+  background-color: black !important;
+  overflow-x: hidden;
+  font-family: "antoni-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.logo {
+  height: auto;
+  width: 140px;
+  padding: 40px 0px 0px 44px;
+}
+
+.header {
+  min-height: 22.3vh;
+}
+
+/* NAV Menu */
+/* No Hamburger :(*/
+nav {
+  padding-top: 40px;
+  letter-spacing: 0.025em;
+  margin-right: 15px;
+  font-weight: 600;
+}
+nav > a {
+  color: white;
+  font-size: 15px;
+  margin: 0px 8px 0px 8px;
+  text-transform: bold;
+}
+
+nav > a:hover {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid rgb(255, 255, 255) !important;
+  transition-duration: 0.2s;
+}
+
+a:active {
+  border-bottom: 2px solid rgb(255, 255, 255) !important;
+  background-image: none !important;
+  transition-duration: 0.2s;
+}
+
+@media only screen and (max-width: 960px) {
+  .navdesktop {
+    display: none;
+  }
+}
+
+/* Hamburger :)*/
+.navmobile {
+  display: none;
+  z-index: 1000;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  right: 2%;
+  top: 2%;
+  background-color: transparent;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: transparent;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: -40px;
+}
+
+.topnav > a {
+  width: 100px;
+}
+
+.topnav a:hover {
+  color: white;
+}
+
+#myLinks {
+  width: 50vw;
+  margin-right: 30px;
+}
+
+@media only screen and (max-width: 960px) {
+  .navmobile {
+    display: block;
+  }
+}
+
+#container {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 100px 0px;
+  cursor: pointer;
+  display: flex;
+  overflow-x: scroll;
+}
+
+#container p {
+  font-family: sans-serif;
+
+  border-radius: 8px;
+
+  color: white;
+
+  padding: 2rem 3rem;
+  margin: 2rem 1rem;
+}
+.slide {
+  display: block;
+}
+
+.slide > video {
+  height: auto;
+  width: 36.6vw;
+}
+
+.slide > h4 {
+  color: white;
+  font-style: bold;
+  padding-left: 1.5vw;
+  margin-top: 2vh;
+  font-size: 29px;
+  position: relative;
+}
+
+.slide > h6 {
+  color: rgb(100, 100, 100);
+  padding-left: 1.5vw;
+  line-height: 1vh;
+  font-size: 20px;
+}
+
+video::after {
+  content: " - Remember this";
+  color: wheat;
+}
+
+.contact-container {
+  background-color: black;
+}
+
+.contact1 {
+  background-color: black;
+  height: 600px;
+}
+
+.contact-image {
+  padding: 50px 0px 50px 150px;
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.contact2 {
+  margin: 0px 0px 0px 0px;
+}
+
+.contact2 > h1 {
+  font-size: 300px;
+  margin-left: -400px;
+}
+.contact2 > p {
+  color: aliceblue;
+}
+
+/* Social Icons CSS */
+
+.container-social {
+  min-height: 100px;
+  vertical-align: middle;
+}
+
+.banner_social {
+  overflow: hidden;
+  display: inline;
+  margin-left: -20px;
+  vertical-align: middle;
+}
+.banner_social > li {
+  list-style: none;
+  display: inline;
+}
+.banner_social li > a {
+  color: #fff;
+  height: 36px;
+  width: 36px;
+  padding: 5px;
+
+  display: inline-block;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 2px;
+  margin-right: 6px;
+  transition: 0.25s;
+}
+.banner_social li > a:hover {
+  background-color: none;
+  color: grey;
+}
+.banner_social > li > a:hover i {
+  -webkit-animation-name: gt_animation;
+  -webkit-animation-duration: 0.8s;
+  animation-name: gt_animation;
+  animation-duration: 0.8s;
+}
+
+/* Hover Fade Effect on videos */
+#container:hover > div {
+  opacity: 0.5;
+}
+
+#container:hover > div:hover {
+  opacity: 1;
+}
+
+/* Popup */
+.popup {
+  background-color: black;
+  width: 100%;
+  padding: 20px 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 90%;
+
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+
+  border-color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.popup button {
+  display: inline-block;
+
+  background-color: transparent;
+  font-size: 15px;
+  color: #000000;
+  background: #ffffff;
+  padding: 10px 25px 10px 25px;
+  width: auto;
+  height: auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.popup h2 {
+  margin-top: -20px;
+  text-align: left;
+}
+.popup p {
+  font-size: 14px;
+  text-align: justify;
+  margin: 20px 0;
+  line-height: 25px;
+  color: white;
+}
+
+.my-auto {
+  text-align: left;
+}
+
+/* Pageload Animation */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#container {
+  /* max-width: 1--%; */
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 100px 0px;
+  cursor: pointer;
+
+  /* animation */
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: slideInLeft;
+}
+.contact-container {
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: slideInLeft;
+}
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  max-width: 10px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(51, 51, 51);
+  border-radius: 10px;
+  width: 200px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(85, 85, 85);
+  border-radius: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(105, 105, 105);
+}
+
+/* Screen Resizer */
+/* MUST GO AFTER ALL ID/CLASSES LISTED INSIDE */
+@media only screen and (max-width: 960px) {
+  #container {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 100px 0px;
+    cursor: pointer;
+    display: block;
+    overflow-x: auto;
+  }
+  .slide > video {
+    height: auto;
+    width: 100%;
+  }
+  .slide > h4 {
+    color: white;
+    font-style: bold;
+    padding-left: 1.5vw;
+    margin-top: 2vh;
+    font-size: 30px;
+  }
+
+  .slide > h6 {
+    color: rgb(255, 255, 255);
+    padding-left: 1.5vw;
+    line-height: 1vh;
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+  .contact2 > h1 {
+    font-size: 170px;
+    margin-left: -180px;
+  }
+  .contact-image {
+    padding-left: 15px;
+  }
+}
