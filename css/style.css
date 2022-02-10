@@ -37,14 +37,25 @@ a:active {
   min-height: 22.3vh;
 }
 
-#container {
-  display: flex;
-  overflow-x: scroll;
+/* scroll resizer */
+@media only screen and (max-width: 991px) and {
+  #container {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 100px 0px;
+    cursor: pointer;
+    display: flex;
+    overflow-x: scroll;
+  }
+}
 
-  /* max-width: 1--%; */
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 100px 0px;
-  cursor: pointer;
+@media only screen and (max-width: 991px) {
+  #container {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 100px 0px;
+    cursor: pointer;
+    display: flex;
+    overflow-x: scroll;
+  }
 }
 
 #container p {
@@ -56,9 +67,6 @@ a:active {
 
   padding: 2rem 3rem;
   margin: 2rem 1rem;
-}
-
-.slide {
 }
 
 .slide > video {
