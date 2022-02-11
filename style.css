@@ -353,7 +353,7 @@ video::after {
     color: white;
     font-style: bold;
     padding-left: 1.5vw;
-    margin-top: 2vh;
+    margin-top: 1vh;
     font-size: 30px;
   }
 
@@ -362,7 +362,7 @@ video::after {
     padding-left: 1.5vw;
     line-height: 1vh;
     font-size: 25px;
-    padding-bottom: 20px;
+    padding-bottom: 70px;
   }
   .contact2 > h1 {
     font-size: 170px;
